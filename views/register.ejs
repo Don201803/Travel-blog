@@ -1,0 +1,40 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;color:#3373FF">歡迎加入會員</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/register" method="post">
+                <div class="form-group">
+                    <label for="name">您的e-mail<span style="color:red;"> *</span></label>
+                    <input class="form-control" type="email" required title="請輸入e-mail" name="email" placeholder="若忘記密碼時會用到">
+                </div>
+                <div class="form-group">
+                    <label for="name">使用者名稱<span style="color:red;"> *</span></label>
+                    <input class="form-control" type="text" pattern=".{4,15}" required title="請輸入4位數以上(英文或數字)" name="username" placeholder="區分大小寫，至少4位英數字">
+                </div>
+                <div class="form-group">
+                    <label for="name">密碼<span style="color:red;"> *</span></label>
+                    <input class="form-control" type="password" pattern=".{4,15}" required title="請輸入4位數以上(英文或數字)" name="password" placeholder="區分大小寫，至少4位英數字">
+                </div>
+                <div class="form-group">
+                    <label for="name">您的姓氏</label>
+                    <input class="form-control" type="text" name="lastName" placeholder="王">
+                </div>
+                <div class="form-group">
+                    <label for="name">您的名字</label>
+                    <input class="form-control" type="text" name="firstName" placeholder="小明">
+                </div>
+                <div class="form-group">
+                    <label for="name">使用者大頭貼</label>
+                    <input class="form-control" type="text" name="avatar" placeholder=" 請輸入圖片連結網址">
+                </div>
+                <div class="form-group">
+                打<span style="color:red;"> * </span>為必填欄位
+                    <button class="btn btn-lg btn-primary btn-block">成為會員</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<% include ./partials/footer %>
+

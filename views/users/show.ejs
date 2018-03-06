@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div class="row">
+    <div class="col-md-4 col-sm-5 col-xs-6">
+        <h1><%= user.username %></h1>
+        <div class="thumbnail">
+        <img src="<%= user.avatar %>" alt="這位使用者沒有放圖像">
+        <div class="caption"><a href="mailto:<%= user.email%>"><%= user.email%></a></div>
+        </div>
+      
+     
+    </div>
+    <div class="col-md-8 col-sm-7 col-xs-12">
+        <h3><%= user.username %>發表過的文章</h3>
+        <ul>
+       <% campgrounds.forEach(function(campground) { %>
+        <li><a href="/campgrounds/<%= campground.id %>"><%= campground.name %></a></li>
+       <% }); %>
+       </ul>
+    </div>
+</div>
+
+<br /><br /><br /><br /><br /><br />
+
+<% include ../partials/footer %>

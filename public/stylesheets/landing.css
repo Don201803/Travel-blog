@@ -1,0 +1,135 @@
+    body {
+    background-size: cover;
+    background-position: center; 
+    transition: background 1.5s linear;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+    webkit-transition: background-image 1.5s linear;
+    -webkit-transform:translate3d(0,0,0);
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+#landFonf{
+    font-family:Microsoft JhengHei; 
+    text-shadow: 0px 4px 3px black,
+                 0px 8px 12px orange
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 60s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://i.imgur.com/5vovkQy.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://i.imgur.com/PI9niDf.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://i.imgur.com/xqlp8eZ.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://i.imgur.com/r7zy2uw.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://i.imgur.com/9uzvq3G.jpg);
+  animation-delay: 40s; 
+}
+.slideshow li:nth-child(6) { 
+  background-image: url(https://i.imgur.com/3eRlvwa.jpg);
+  animation-delay: 50s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 5em;
+}
+
+
+.content{
+	padding-top: 20%;
+	text-align: center;
+}
+
+.content h1, .content h3{
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+
+hr {
+    width: 600px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}

@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+<div class="row">
+	<div class="col-md-12">
+		<form action="/reset/<%= token %>" method="POST">
+		  <legend>您將完成密碼重置</legend>
+		  <div class="form-group">
+		    <label for="password">新密碼</label>
+		    <input type="password" name="password" value="" placeholder="新密碼" autofocus="autofocus" class="form-control"/>
+		  </div>
+		  <div class="form-group">
+		    <label for="confirm">確認新密碼</label>
+		    <input type="password" name="confirm" value="" placeholder="確認新密碼" class="form-control"/>
+		  </div>
+		  <div class="form-group">
+		    <button type="submit" class="btn btn-primary">確認更新密碼</button>
+		  </div>
+		</form>
+	</div>
+</div>
+<% include ./partials/footer %>

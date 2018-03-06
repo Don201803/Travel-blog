@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>發現台灣！誠摯邀您一起加入探索</title>
+        <script src="https://code.jquery.com/jquery-git2.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+     </button>
+                <a class="navbar-brand" href="/campgrounds">回首頁</a>
+     
+                <a class="navbar-brand" href="/campgrounds/new">新增景點</a>
+                
+                <a class="navbar-brand" target="_blank" href="https://github.com/Don201803/Travel-blog">相關網站</a>
+                
+                <a class="navbar-brand" href="/about">About Me</a>
+                
+                <a class="navbar-brand" href="/messages">留言箱</a>
+                
+    <div class="navbar-brand dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">友站連結 <span class="caret"></span></a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="https://viablog.okmall.tw/">Via's旅行札記-旅遊美食部落格</a></li>
+    <li><a href="https://www.car-plus.com.tw/">格上租車</a></li>
+    <li><a href="https://www.easytravel.com.tw/taiwan/orderroom/">四方通行台灣訂房</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="http://www.cwb.gov.tw/V7/forecast/week/week.htm">中央氣象局-一周天氣預報</a></li>
+  </ul>
+</div>
+     </div>
+     
+            <div class="collapse navbar-collapse" id="navbar1-collapse">
+                   <ul class="nav navbar-nav navbar-right">
+                    <% if(!currentUser){ %>
+                    <li><a href="/login">登入</a></li>
+                    <li><a href="/register">註冊</a></li>
+                    <% } else {%>
+                    <li><a href="#"><%= currentUser.username %></a></li>
+                    <li><a href="/logout">登出</a></li>
+                    <% } %>
+                 </ul> 
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+       <% if(error && error.length > 0) { %>
+         <div class="alert alert-danger"><p><%=error %></p></div>
+       <% } %>
+       
+       <% if(success && success.length > 0) { %>
+         <div class="alert alert-success"><p><%= success %></p></div>
+       <% } %>
+    </div>
+    <div class="container">
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX5xrK5Nd7TvvxippkhF8jyJaFc4riuLA&libraries=places"></script>

@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+<div class="row">
+	<div class="col-md-12">
+		<form action="/forgot" method="POST">
+			<legend>即將進行密碼重置！若您不希望更新您的密碼，請回上一頁</legend>
+			<div class="form-group">
+				<label for="email">請輸入您註冊會員時用的e-mail</label>
+				<input type="email" name="email" autofocus class="form-control">
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-danger" value="確定送出">
+				&nbsp
+				&nbsp
+				&nbsp
+				<a href="/login" >回上一頁</a>
+			</div>
+		</form>
+	</div>
+</div>
+<% include ./partials/footer %>

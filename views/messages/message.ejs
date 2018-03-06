@@ -1,0 +1,51 @@
+<% include ../partials/header %>
+
+<br />
+
+<h1>歡迎隨時提出您的建議，敬請不吝賜教。</h1>
+   
+<form action="/messages" method="POST">
+
+<br />
+
+<B>您的大名: 
+</B><INPUT NAME="guestname" size="30"> <BR>
+
+<br />
+
+<B>您的E-mail: 
+</B><INPUT Name="guestmail" size="30">
+<p>
+    
+<br />
+
+<B>您覺得這個網站如何？</B>
+<P>
+
+<INPUT TYPE="radio" NAME=I_think_that VALUE="It's_Great">
+很棒
+<INPUT TYPE="radio" NAME=I_think_that VALUE="It_stinks">
+還可以 
+<INPUT TYPE="radio" NAME=I_think_that VALUE="You_stink">
+普通
+<INPUT TYPE="radio" NAME=I_think_that VALUE="I_stink">
+有點遜
+<INPUT TYPE="radio" NAME=I_think_that VALUE="We_all_stink">
+很爛
+<P>
+
+
+<H3>任何您想說的話:</H3>
+<CENTER>
+<TEXTAREA NAME="guestbook" ROWS=6 COLS=60></TEXTAREA>
+<P>
+<B>感謝您寶貴的意見</B>
+
+<br />
+
+<INPUT TYPE=submit VALUE="送出留言">
+</CENTER>
+</form>
+
+    </body>
+</html>
